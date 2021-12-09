@@ -9,11 +9,13 @@
 # Installation
 ```sh
 git clone https://github.com/Domterion/catfetch
-cd catfetch/cmd/catfetch
+cd ./catfetch/
+go mod download
+cd ./cmd/catfetch/
 go build -ldflags "-w -s"
 sudo install -m755 ./catfetch /usr/bin/catfetch
 cd ../../..
-rm -rf catfetch
+rm -rf ./catfetch/
 catfetch
 ```
 
