@@ -2,9 +2,11 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"os"
 	"os/user"
 	"strings"
+	"time"
 
 	"github.com/joho/godotenv"
 )
@@ -43,7 +45,18 @@ func main() {
 	shell := os.Getenv("SHELL")
 	formattedShell := fmt.Sprintf("%s Shell: %s %s", blue, shell, reset)
 
-	formattedEye := fmt.Sprintf("%s'%s", boldYellow, reset)
+	rand.Seed(time.Now().UnixNano())
+	rand := rand.Intn(10);
+
+	var eyeCharacter string;
+
+	if rand > 7 {
+		eyeCharacter = "o"
+	} else {
+		eyeCharacter = "'"
+	}
+
+	formattedEye := fmt.Sprintf("%s%s%s", boldYellow, eyeCharacter, reset)
 
 	fmt.Printf(cat, formattedHostName, formattedEye, formattedOperatingSystem, formattedKernelVersion, formattedShell)
 }
