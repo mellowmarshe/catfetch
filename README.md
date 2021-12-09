@@ -7,7 +7,15 @@
 </div>
 
 # Installation
-soon... maybe...
+```sh
+git clone https://github.com/Domterion/catfetch
+cd catfetch/cmd/catfetch
+go build -ldflags "-w -s"
+sudo install -m755 ./catfetch /usr/bin/catfetch
+cd ../../..
+rm -rf catfetch
+catfetch
+```
 
 # License
 MIT
