@@ -27,7 +27,6 @@ const cat = `   \    /\    %s
     )  ( %s)   %s
    (  /  )    %s
     \(__)|    %s 
-
                %s
 `
 
@@ -40,18 +39,18 @@ func main() {
 	formattedHostName := fmt.Sprintf("%s %s%s@%s%s %s", boldRed, username, red, boldRed, hostname, reset)
 
 	operatingSystem := getOperatingSystem()
-	formattedOperatingSystem := fmt.Sprintf("%s OS: %s %s", yellow, operatingSystem, reset)
+	formattedOperatingSystem := fmt.Sprintf("%s OS: %s%s", yellow, reset, operatingSystem)
 
 	kernelVersion := getKernelVersion()
-	formattedKernelVersion := fmt.Sprintf("%s Kernel: %s %s", green, kernelVersion, reset)
+	formattedKernelVersion := fmt.Sprintf("%s Kernel: %s%s", green, reset, kernelVersion)
 
 	shell := os.Getenv("SHELL")
-	formattedShell := fmt.Sprintf("%s Shell: %s %s", blue, shell, reset)
+	formattedShell := fmt.Sprintf("%s Shell: %s%s", blue, reset, shell)
 
 	rand.Seed(time.Now().UnixNano())
-	rand := rand.Intn(10);
+	rand := rand.Intn(10)
 
-	var eyeCharacter string;
+	var eyeCharacter string
 
 	if rand > 7 {
 		eyeCharacter = "o"
