@@ -16,6 +16,7 @@ const yellow = "\033[0;33m"
 const green = "\033[0;32m"
 const blue = "\033[0;34m"
 const purple = "\033[0;35m"
+const cyan = "\033[0;36m"
 const boldRed = "\033[1;31m"
 const boldYellow = "\033[1;33m"
 const boldPurple = "\033[1;35m"
@@ -26,6 +27,8 @@ const cat = `   \    /\    %s
     )  ( %s)   %s
    (  /  )    %s
     \(__)|    %s 
+
+               %s
 `
 
 func main() {
@@ -58,7 +61,9 @@ func main() {
 
 	formattedEye := fmt.Sprintf("%s%s%s", boldYellow, eyeCharacter, reset)
 
-	fmt.Printf(cat, formattedHostName, formattedEye, formattedOperatingSystem, formattedKernelVersion, formattedShell)
+	formattedColors := fmt.Sprintf("%s██%s██%s██%s██%s██%s██ %s", red, green, yellow, blue, purple, cyan, reset)
+
+	fmt.Printf(cat, formattedHostName, formattedEye, formattedOperatingSystem, formattedKernelVersion, formattedShell, formattedColors)
 }
 
 func getCurrentUsername() string {
