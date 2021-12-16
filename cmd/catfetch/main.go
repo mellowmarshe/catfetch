@@ -61,7 +61,7 @@ func main() {
 
 	formattedEye := fmt.Sprintf("%s%s%s", boldYellow, eyeCharacter, reset)
 
-	formattedColors := fmt.Sprintf("%s██%s██%s██%s██%s██%s██ %s", red, green, yellow, blue, purple, cyan, reset)
+	formattedColors := fmt.Sprintf("%s▇▇%s▇▇%s▇▇%s▇▇%s▇▇%s▇▇ %s", red, green, yellow, blue, purple, cyan, reset)
 
 	fmt.Printf(cat, formattedHostName, formattedEye, formattedOperatingSystem, formattedKernelVersion, formattedShell, formattedColors)
 }
