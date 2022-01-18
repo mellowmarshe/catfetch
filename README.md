@@ -9,7 +9,7 @@
 # Installation
 
 AUR:
-SoonTM
+Coming soonTM
 
 Manual:
 ```sh
