@@ -74,7 +74,7 @@ func main() {
 
 	formattedEye := fmt.Sprintf("%s%s%s", boldYellow, eyeCharacter, reset)
 
-	formattedColors := fmt.Sprintf("%s▇▇%s▇▇%s▇▇%s▇▇%s▇▇%s▇▇ %s", red, green, yellow, blue, purple, cyan, reset)
+	formattedColors := fmt.Sprintf("%s⚫︎%s⚫︎%s⚫︎%s⚫︎%s⚫︎%s⚫︎ %s", red, green, yellow, blue, purple, cyan, reset)
 
 	if isCompact {
 		fmt.Printf(compact, formattedHostName, formattedOperatingSystem, formattedKernelVersion, formattedShell, formattedColors)
