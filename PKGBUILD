@@ -1,3 +1,5 @@
+# Maintainer: Dominic Harris <dominic@domm.me>
+
 pkgname=catfetch
 pkgver=0.0.1
 pkgrel=1
