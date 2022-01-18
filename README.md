@@ -7,6 +7,11 @@
 </div>
 
 # Installation
+
+AUR:
+SoonTM
+
+Manual:
 ```sh
 git clone https://github.com/Domterion/catfetch
 cd ./catfetch/
