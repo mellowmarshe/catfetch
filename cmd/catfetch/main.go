@@ -39,7 +39,6 @@ const compact = `%s
 `
 
 func main() {
-
 	var isCompact bool
 
 	flag.BoolVar(&isCompact, "compact", false, "If this flag is present the ASCII art cat wont be printed")
