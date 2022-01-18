@@ -24,13 +24,13 @@ const boldPurple = "\033[1;35m"
 const boldWhite = "\033[1;37m"
 const reset = "\033[0m"
 
-const cat = `   \    /\    %s              
+const cat = `              %s   
+   \    /\    %s             
     )  ( %s)   %s
    (  /  )    %s
     \(__)|    %s 
-              %s
+              
 `
-
 const compact = `%s
 %s
 %s
@@ -79,7 +79,7 @@ func main() {
 	if isCompact {
 		fmt.Printf(compact, formattedHostName, formattedOperatingSystem, formattedKernelVersion, formattedShell, formattedColors)
 	} else {
-		fmt.Printf(cat, formattedHostName, formattedEye, formattedOperatingSystem, formattedKernelVersion, formattedShell, formattedColors)
+		fmt.Printf(cat, formattedHostName, formattedOperatingSystem, formattedEye, formattedKernelVersion, formattedShell, formattedColors)
 	}
 
 }
