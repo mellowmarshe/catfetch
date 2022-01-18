@@ -1,14 +1,14 @@
 # Maintainer: Dominic Harris <dominic@domm.me>
 
-pkgname=catfetch
+pkgname=catfetch-git
 pkgver=0.0.1
 pkgrel=1
 pkgdesc='A small and cute fetch program written in Go'
 arch=('x86_64')
-url="https://github.com/Domterion/$pkgname"
+url="https://github.com/Domterion/catfetch"
 license=('MIT')
 makedepends=('go')
-source=("$pkgname-$pkgver::git+https://github.com/Domterion/$pkgname")
+source=("$pkgname-$pkgver::git+$url")
 sha256sums=('SKIP')
 
 prepare() {
