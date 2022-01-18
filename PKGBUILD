@@ -6,7 +6,7 @@ arch=('x86_64')
 url="https://github.com/Domterion/$pkgname"
 license=('MIT')
 makedepends=('go')
-source=("https://github.com/Domterion/$pkgname/archive/$pkgname-$pkgver.tar.gz")
+source=("$pkgname-$pkgver::git+https://github.com/Domterion/$pkgname")
 sha256sums=('SKIP')
 
 prepare() {
