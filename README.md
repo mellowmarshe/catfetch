@@ -9,7 +9,7 @@
 # Installation
 
 AUR:
-Coming soonTM
+`catfetch-git`
 
 Manual:
 ```sh
