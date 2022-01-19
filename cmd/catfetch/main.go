@@ -13,6 +13,7 @@ const red = "\033[0;31m"
 const yellow = "\033[0;33m"
 const green = "\033[0;32m"
 const blue = "\033[0;34m"
+const gray = "\033[0;90m"
 const purple = "\033[0;35m"
 const cyan = "\033[0;36m"
 const boldRed = "\033[1;31m"
@@ -29,15 +30,14 @@ const reset = "\033[0m"
 //     \(__)|    %s
 // `
 
-//We cant escape backticks in Go..
+// We cant escape backticks in Go..
 const cat = `.       .
 \` + "`" + `-"'"-'/     %s
- } 6 6 {      
+ } 6 6 {      %s
 =.  Y  ,=     %s
   /^^^\  .    %s
  /     \  )   %s
-(  )-(  )/    %s
- ""   ""
+(..)-(..)/    
 `
 
 func main() {
@@ -46,16 +46,19 @@ func main() {
 	username := getCurrentUsername()
 	hostname := getHostname()
 
-	formattedHostName := fmt.Sprintf("%s%s%s@%s%s%s", reset, username, reset, reset, hostname, reset)
+	formattedHostName := fmt.Sprintf("%s%s%s@%s%s%s", boldWhite, username, reset, boldWhite, hostname, reset)
+
+	// separator := strings.Repeat("━", len(username+"@"+hostname))
+	// formattedSeparator := fmt.Sprintf("%s%s%s", gray, separator, reset)
 
 	operatingSystem := getOperatingSystem()
-	formattedOperatingSystem := fmt.Sprintf("%s■ os %s%s", boldYellow, reset, operatingSystem)
+	formattedOperatingSystem := fmt.Sprintf("%s■%s os %s%s", gray, boldWhite, reset, strings.ToLower(operatingSystem))
 
 	kernelVersion := getKernelVersion()
-	formattedKernelVersion := fmt.Sprintf("%s■ kernel %s%s", boldGreen, reset, kernelVersion)
+	formattedKernelVersion := fmt.Sprintf("%s■%s kernel %s%s", gray, boldWhite, reset, kernelVersion)
 
 	shell := os.Getenv("SHELL")
-	formattedShell := fmt.Sprintf("%s■ shell %s%s", boldBlue, reset, shell)
+	formattedShell := fmt.Sprintf("%s■%s shell %s%s", gray, boldWhite, reset, shell)
 
 	//formattedEye := fmt.Sprintf("%s'%s", boldYellow, reset)
 

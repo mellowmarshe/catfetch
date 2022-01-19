@@ -8,9 +8,6 @@
 
 # Installation
 
-AUR:
-`catfetch-git`
-
 Manual:
 ```sh
 git clone https://github.com/Domterion/catfetch
