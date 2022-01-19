@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"os/user"
 	"strings"
 
 	"github.com/joho/godotenv"
@@ -22,66 +23,66 @@ const boldPurple = "\033[1;35m"
 const boldWhite = "\033[1;37m"
 const reset = "\033[0m"
 
-const cat = `   \    /\    %s
-    )  ( %s)   %s
-   (  /  )    %s
-    \(__)|    %s
-`
-
-// We cant escape backticks in Go..
-// const cat = `.       .
-// \` + "`" + `-"'"-'/     %s
-//  } %s %s {
-// =.  Y  ,=     %s
-//   /^^^\  .    %s
-//  /     \  )   %s
-// (  )-(  )/    %s
-//  ""   ""
+// const cat = `   \    /\    %s
+//     )  ( %s)   %s
+//    (  /  )    %s
+//     \(__)|    %s
 // `
+
+//We cant escape backticks in Go..
+const cat = `.       .
+\` + "`" + `-"'"-'/     %s
+ } 6 6 {      
+=.  Y  ,=     %s
+  /^^^\  .    %s
+ /     \  )   %s
+(  )-(  )/    %s
+ ""   ""
+`
 
 func main() {
 	godotenv.Load("/etc/os-release")
 
-	// username := getCurrentUsername()
-	// hostname := getHostname()
+	username := getCurrentUsername()
+	hostname := getHostname()
 
-	// formattedHostName := fmt.Sprintf("%s%s%s@%s%s%s", boldWhite, username, reset, boldWhite, hostname, reset)
+	formattedHostName := fmt.Sprintf("%s%s%s@%s%s%s", reset, username, reset, reset, hostname, reset)
 
 	operatingSystem := getOperatingSystem()
-	formattedOperatingSystem := fmt.Sprintf("%sOS: %s%s", boldYellow, reset, operatingSystem)
+	formattedOperatingSystem := fmt.Sprintf("%s■ os %s%s", boldYellow, reset, operatingSystem)
 
 	kernelVersion := getKernelVersion()
-	formattedKernelVersion := fmt.Sprintf("%sKernel: %s%s", boldGreen, reset, kernelVersion)
+	formattedKernelVersion := fmt.Sprintf("%s■ kernel %s%s", boldGreen, reset, kernelVersion)
 
 	shell := os.Getenv("SHELL")
-	formattedShell := fmt.Sprintf("%sShell: %s%s", boldBlue, reset, shell)
+	formattedShell := fmt.Sprintf("%s■ shell %s%s", boldBlue, reset, shell)
 
-	formattedEye := fmt.Sprintf("%s'%s", boldYellow, reset)
+	//formattedEye := fmt.Sprintf("%s'%s", boldYellow, reset)
 
 	formattedColors := fmt.Sprintf("%s■■■%s■■■%s■■■%s■■■%s■■■%s■■■ %s", red, green, yellow, blue, purple, cyan, reset)
 
-	fmt.Printf(cat, formattedOperatingSystem, formattedEye, formattedKernelVersion, formattedShell, formattedColors)
+	fmt.Printf(cat, formattedHostName, formattedOperatingSystem, formattedKernelVersion, formattedShell, formattedColors)
 }
 
-// func getCurrentUsername() string {
-// 	username, err := user.Current()
+func getCurrentUsername() string {
+	username, err := user.Current()
 
-// 	if err != nil {
-// 		return "unknown"
-// 	}
+	if err != nil {
+		return "unknown"
+	}
 
-// 	return username.Username
-// }
+	return username.Username
+}
 
-// func getHostname() string {
-// 	hostname, err := os.Hostname()
+func getHostname() string {
+	hostname, err := os.Hostname()
 
-// 	if err != nil {
-// 		return "unknown"
-// 	}
+	if err != nil {
+		return "unknown"
+	}
 
-// 	return hostname
-// }
+	return hostname
+}
 
 func getOperatingSystem() string {
 	return os.Getenv("NAME")
