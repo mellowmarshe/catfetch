@@ -8,6 +8,12 @@
 
 # Installation
 
+Download a prebuilt binary from the releases or actions 
+
+or
+
+DIY
+
 ```sh
 git clone https://github.com/Domterion/catfetch
 cd ./catfetch/
