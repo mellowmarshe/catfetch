@@ -22,7 +22,7 @@ jobs:
       run: go build -v ./cmd/...
 
     - name: Upload
-    - uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v2
       with:
       name: catfetch-${{ matrix.os }}-${{ matrix.arch }}
       path: catfetch
