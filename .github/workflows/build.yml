@@ -24,5 +24,8 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v2
       with:
-        name: catfetch-${{ matrix.os }}-${{ matrix.arch }}
-        path: catfetch
+        name: catfetch
+        path: |
+            catfetch
+            README.md
+            LICENSE
