@@ -52,13 +52,13 @@ func main() {
 	// formattedSeparator := fmt.Sprintf("%s%s%s", gray, separator, reset)
 
 	operatingSystem := getOperatingSystem()
-	formattedOperatingSystem := fmt.Sprintf("%s■%s os %s%s", gray, boldWhite, reset, strings.ToLower(operatingSystem))
+	formattedOperatingSystem := fmt.Sprintf("%sos %s%s", red, reset, strings.ToLower(operatingSystem))
 
 	kernelVersion := getKernelVersion()
-	formattedKernelVersion := fmt.Sprintf("%s■%s kernel %s%s", gray, boldWhite, reset, kernelVersion)
+	formattedKernelVersion := fmt.Sprintf("%skernel %s%s", green, reset, kernelVersion)
 
 	shell := os.Getenv("SHELL")
-	formattedShell := fmt.Sprintf("%s■%s shell %s%s", gray, boldWhite, reset, shell)
+	formattedShell := fmt.Sprintf("%sshell %s%s", blue, reset, shell)
 
 	//formattedEye := fmt.Sprintf("%s'%s", boldYellow, reset)
 
