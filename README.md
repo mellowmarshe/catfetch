@@ -3,7 +3,7 @@
     Catfetch is a small and cute fetch program written in Go
     <br>
     <br>
-    <img src="https://i.imgur.com/dkFFRLM.png"></img>
+    <img src="https://domiscute.com/6h5W0AA34.png"></img>
 </div>
 
 # Installation
