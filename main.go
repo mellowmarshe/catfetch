@@ -24,12 +24,6 @@ const boldPurple = "\033[1;35m"
 const boldWhite = "\033[1;37m"
 const reset = "\033[0m"
 
-// const cat = `   \    /\    %s
-//     )  ( %s)   %s
-//    (  /  )    %s
-//     \(__)|    %s
-// `
-
 // We cant escape backticks in Go..
 const cat = `.       .
 \` + "`" + `-"'"-'/     %s
@@ -48,9 +42,6 @@ func main() {
 
 	formattedHostName := fmt.Sprintf("%s%s%s@%s%s%s", boldWhite, username, reset, boldWhite, hostname, reset)
 
-	// separator := strings.Repeat("━", len(username+"@"+hostname))
-	// formattedSeparator := fmt.Sprintf("%s%s%s", gray, separator, reset)
-
 	operatingSystem := getOperatingSystem()
 	formattedOperatingSystem := fmt.Sprintf("%sos %s%s", red, reset, strings.ToLower(operatingSystem))
 
@@ -59,8 +50,6 @@ func main() {
 
 	shell := os.Getenv("SHELL")
 	formattedShell := fmt.Sprintf("%sshell %s%s", blue, reset, shell)
-
-	//formattedEye := fmt.Sprintf("%s'%s", boldYellow, reset)
 
 	formattedColors := fmt.Sprintf("%s■■■%s■■■%s■■■%s■■■%s■■■%s■■■ %s", red, green, yellow, blue, purple, cyan, reset)
 
