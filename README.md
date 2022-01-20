@@ -20,7 +20,7 @@ cd ./catfetch/
 go get -d ./...
 go build -ldflags "-w -s"
 sudo install -m755 ./catfetch /usr/bin/catfetch
-cd ../../
+cd ../
 rm -rf ./catfetch/
 catfetch
 ```

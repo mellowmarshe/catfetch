@@ -51,7 +51,7 @@ func main() {
 	shell := os.Getenv("SHELL")
 	formattedShell := fmt.Sprintf("%sshell %s%s", blue, reset, shell)
 
-	formattedColors := fmt.Sprintf("%s■■■%s■■■%s■■■%s■■■%s■■■%s■■■ %s", red, green, yellow, blue, purple, cyan, reset)
+	formattedColors := fmt.Sprintf("%s███%s███%s███%s███%s███%s███ %s", red, green, yellow, blue, purple, cyan, reset)
 
 	fmt.Printf(cat, formattedHostName, formattedOperatingSystem, formattedKernelVersion, formattedShell, formattedColors)
 }
