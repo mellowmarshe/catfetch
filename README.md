@@ -1,9 +1,9 @@
 <div align="center">
     <h1>🐱 Catfetch</h1>
-    Catfetch is a small and cute fetch program written in Go
+    Catfetch is a small and cute fetch program written in Go. Linux only (developed on Arch BTW)
     <br>
     <br>
-    <img src="https://domiscute.com/6h5W0AA34.png"></img>
+    <img src="https://domiscute.com/qaHDa-DQ4.png"></img>
 </div>
 
 # Installation
