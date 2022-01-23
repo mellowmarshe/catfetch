@@ -3,7 +3,7 @@
     Catfetch is a small and cute fetch program written in Go. Linux only (developed on Arch BTW)
     <br>
     <br>
-    <img src="https://domiscute.com/qaHDa-DQ4.png"></img>
+    <img src="https://i.imgur.com/1IFpQwZ.png"></img>
 </div>
 
 # Installation
